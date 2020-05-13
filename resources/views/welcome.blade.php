@@ -6,4 +6,13 @@
             <h1>YouTubeまとめ ×SNS</h1>
         </div>
     </div>
+    <div class="text-right">
+        @if(Auth::check())
+            {{ Auth::user()->name}}
+            @include('users.users',['users'=>$users])
+        @endif
+    </div>
+    
+    
+    
 @endsection
